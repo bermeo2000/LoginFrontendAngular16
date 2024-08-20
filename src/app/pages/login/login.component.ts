@@ -12,7 +12,6 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-
   loginData = {
     "username": '',
     "password": '',
@@ -27,42 +26,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /* formSubmit(){
-    if (this.loginData.username.trim() === '' || this.loginData.username.trim() === null) {
-      this.messageService.add({
-        severity: 'warn',
-        summary: 'Error',
-        detail: 'El nombre de usuario es requerido !!',
-        life: 3000
-      });
-      return;
-    }
-    if (this.loginData.password.trim() == '' || this.loginData.password.trim() == null) {
-      this.messageService.add({
-        severity: 'warn',
-        summary: 'Error',
-        detail: 'El nombre de usuario es requerido !!',
-        life: 3000
-      });
-      return;
-    }
-
-    this.loginService.generateToken(this.loginData).subscribe(
-      (data: any) => {
-        console.log(data);
-
-        this.loginService.loginUser(data.token)
-        this.loginService.getCurrentUser().subscribe((user: any) =>{
-          console.log(user)
-        })
-  },(error)=>{
-  console.log(error);
-})
-} */
-
 
   formSubmit() {
-   
     if (this.loginData.username.trim() === '' || this.loginData.username.trim() === null) {
       this.messageService.add({
         severity: 'warn',

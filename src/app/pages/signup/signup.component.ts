@@ -12,6 +12,9 @@ import Swal from 'sweetalert2';
 })
 export class SignupComponent implements OnInit{
 
+  value!: string;
+
+
   usuarioForm!: FormGroup;
   usuarios: Usuario[] = [];
   imageBase64: string | ArrayBuffer | null = null;
@@ -31,15 +34,7 @@ export class SignupComponent implements OnInit{
         imagen: ['',],
         username: ['', [Validators.required]],
       });
-
-      
     }
-
-
-
-
-    
-
 
 
   ngOnInit(): void {

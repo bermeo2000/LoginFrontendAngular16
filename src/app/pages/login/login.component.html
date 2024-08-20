@@ -1,36 +1,39 @@
-<div class="bootstrap-wrapper">
-    <div class="container">
-        <div class="row mt20">
-            <div class="col-md-6 offset-md-3">
-                <p-card>
+<form (ngSubmit)="formSubmit()">
 
-                    <h1 class="text-center">Inicio de sesión</h1>
-                    <form (ngSubmit)="formSubmit()">
-                        <div class="p-fluid">
-                            <div class="p-field">
-                                <label for="username">Nombre de usuario</label>
-                                <input id="username" [(ngModel)]="loginData.username" name="username" required
-                                    pInputText placeholder="Digite su nombre de usuario">
-                                <small>El nombre de usuario debe ser valido</small>
-                            </div>
-                            <div class="p-field">
-                                <label for="password">Contraseña</label>
-                                <p-password id="password" [(ngModel)]="loginData.password" name="password" required
-                                placeholder="Digite su contraseña"></p-password>
-                                <small>La contraseña debe ser valida</small>
-                            </div>
+    <p-card [style]="{ width: '320px', 'margin-top': '30px'  }" class="conter-center">
+        <ng-template pTemplate="header">
+            <div class="conter-center">
+                <img alt="Card" src="../../../assets/user.png" class="small-image" />
+            </div>
+            <h2 class="conter-center" style="margin-top: -13px;">Loguéate</h2>
+        </ng-template>
 
-                            <br><br>
-
-                            <div class="container text-center">
-                                <button type="submit" pButton label="Iniciar sesión" class="p-button-primary"></button>
-                            </div>
-                        </div>
-                    </form>
-                </p-card>
+        <div class="card flex flex-wrap justify-content-center" style="margin-top: -50px;">
+            <div class="field-container">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="username" [(ngModel)]="loginData.username" name="username" required pInputText />
+                        <label for="username">Username</label>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<p-toast></p-toast>
+        <div class="card flex flex-wrap justify-content-center">
+            <div class="field-container">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="password" [(ngModel)]="loginData.password" name="password" required pInputText />
+                        <label for="password">Password</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <ng-template pTemplate="footer">
+            <div class="conter-center" style="margin-top: -40px;">
+                <button type="submit" pButton label="Iniciar sesión" class="p-button-primary"></button>
+            </div>
+        </ng-template>
+    </p-card>
+</form>

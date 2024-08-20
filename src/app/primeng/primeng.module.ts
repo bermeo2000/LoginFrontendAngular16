@@ -19,7 +19,7 @@ import { MenuModule } from 'primeng/menu';
 import { SidebarModule } from 'primeng/sidebar';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
-import { MessageService } from 'primeng/api';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [],
@@ -44,6 +44,7 @@ import { MessageService } from 'primeng/api';
     SidebarModule,
     InputTextModule,
     PasswordModule,
+    InputTextareaModule
   ],
   exports: [
     ButtonModule,
@@ -63,6 +64,7 @@ import { MessageService } from 'primeng/api';
     SidebarModule,
     InputTextModule,
     PasswordModule,
+    InputTextareaModule
   ]
   
 })

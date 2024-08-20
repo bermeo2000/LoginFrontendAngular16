@@ -1,31 +1,42 @@
-.card-container {
-    display: flex;
-    justify-content: center;
-  
-
+.small-image {
+    width: 120px;
+    height: 120px;
 }
 
+.conter-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    max-width: 800px; /* Ajusta según el diseño necesario */
+    margin: 20px auto;
+}
 
 .field-container {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    justify-content: space-between;
+    gap: 1rem; /* Espacio entre los campos */
 }
 
 .field {
-    flex: 1;
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 0; /* Para evitar que el contenido se desborde */
+    display: flex;
+    flex-direction: column;
 }
 
-.col {
-    flex: 1;
+.p-float-label {
+    width: 100%;
 }
 
-.small-label {
-    display: block;
-    margin-bottom: 0.5rem;
+.alert {
+    margin-top: 0.5rem;
 }
 
-.mb-4 {
-    margin-bottom: 1.5rem; /* Ajusta el valor según el espacio deseado */
+.small-password {
+    width: 50%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 200px; /* Ajusta el tamaño máximo si es necesario */
 }
